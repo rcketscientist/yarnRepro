@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["common", "portal:../common::locator=b%40workspace%3A."],
             ["common-thing", "link:../common/src/common-thing::locator=b%40workspace%3A."],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
@@ -46,7 +47,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["b", "workspace:."],
+            ["common", "portal:../common::locator=b%40workspace%3A."],
             ["common-thing", "link:../common/src/common-thing::locator=b%40workspace%3A."],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["common", [
+        ["portal:../common::locator=b%40workspace%3A.", {
+          "packageLocation": "../common/",
+          "packageDependencies": [
+            ["common", "portal:../common::locator=b%40workspace%3A."],
+            ["common-thing", "link:./src/common-thing::locator=common%40portal%3A..%2Fcommon%3A%3Alocator%3Db%2540workspace%253A."],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -57,6 +70,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "../common/src/common-thing/",
           "packageDependencies": [
             ["common-thing", "link:../common/src/common-thing::locator=b%40workspace%3A."]
+          ],
+          "linkType": "SOFT",
+          "discardFromLookup": true
+        }],
+        ["link:./src/common-thing::locator=common%40portal%3A..%2Fcommon%3A%3Alocator%3Db%2540workspace%253A.", {
+          "packageLocation": "../common/src/common-thing/",
+          "packageDependencies": [
+            ["common-thing", "link:./src/common-thing::locator=common%40portal%3A..%2Fcommon%3A%3Alocator%3Db%2540workspace%253A."]
           ],
           "linkType": "SOFT",
           "discardFromLookup": true

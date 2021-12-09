@@ -255,6 +255,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "a@workspace:."
   dependencies:
+    common: "portal:../common"
     common-thing: "link:../common/src/common-thing"
     ts-loader: ^9.2.6
     typescript: ^4.5.2
@@ -417,6 +418,21 @@ __metadata:
 "common-thing@link:../common/src/common-thing::locator=a%40workspace%3A.":
   version: 0.0.0-use.local
   resolution: "common-thing@link:../common/src/common-thing::locator=a%40workspace%3A."
+  languageName: node
+  linkType: soft
+
+"common-thing@link:./src/common-thing::locator=common%40portal%3A..%2Fcommon%3A%3Alocator%3Da%2540workspace%253A.":
+  version: 0.0.0-use.local
+  resolution: "common-thing@link:./src/common-thing::locator=common%40portal%3A..%2Fcommon%3A%3Alocator%3Da%2540workspace%253A."
+  languageName: node
+  linkType: soft
+
+"common@portal:../common::locator=a%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "common@portal:../common::locator=a%40workspace%3A."
+  dependencies:
+    common-thing: "link:./src/common-thing"
+    typescript: ^4.5.2
   languageName: node
   linkType: soft
 

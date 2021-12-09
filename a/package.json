@@ -5,6 +5,7 @@
     "build": "webpack"
   },
   "dependencies": {
+    "common": "portal:../common",
     "common-thing": "link:../common/src/common-thing",
     "typescript": "^4.5.2"
   },

@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
+            ["common", "portal:../common::locator=a%40workspace%3A."],
             ["common-thing", "link:../common/src/common-thing::locator=a%40workspace%3A."],
             ["ts-loader", "virtual:98449bcd1a995107381bb2a9bb025eddcbfc97f53a77200ba549e5724810901dfb40398b7d55932ef7f965e46a338566339ecc4f531b87f778707c73bfad3365#npm:9.2.6"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
@@ -371,6 +372,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["a", "workspace:."],
+            ["common", "portal:../common::locator=a%40workspace%3A."],
             ["common-thing", "link:../common/src/common-thing::locator=a%40workspace%3A."],
             ["ts-loader", "virtual:98449bcd1a995107381bb2a9bb025eddcbfc97f53a77200ba549e5724810901dfb40398b7d55932ef7f965e46a338566339ecc4f531b87f778707c73bfad3365#npm:9.2.6"],
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"],
@@ -574,11 +576,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["common", [
+        ["portal:../common::locator=a%40workspace%3A.", {
+          "packageLocation": "../common/",
+          "packageDependencies": [
+            ["common", "portal:../common::locator=a%40workspace%3A."],
+            ["common-thing", "link:./src/common-thing::locator=common%40portal%3A..%2Fcommon%3A%3Alocator%3Da%2540workspace%253A."],
+            ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
       ["common-thing", [
         ["link:../common/src/common-thing::locator=a%40workspace%3A.", {
           "packageLocation": "../common/src/common-thing/",
           "packageDependencies": [
             ["common-thing", "link:../common/src/common-thing::locator=a%40workspace%3A."]
+          ],
+          "linkType": "SOFT",
+          "discardFromLookup": true
+        }],
+        ["link:./src/common-thing::locator=common%40portal%3A..%2Fcommon%3A%3Alocator%3Da%2540workspace%253A.", {
+          "packageLocation": "../common/src/common-thing/",
+          "packageDependencies": [
+            ["common-thing", "link:./src/common-thing::locator=common%40portal%3A..%2Fcommon%3A%3Alocator%3Da%2540workspace%253A."]
           ],
           "linkType": "SOFT",
           "discardFromLookup": true

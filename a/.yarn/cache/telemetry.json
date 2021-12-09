@@ -1,0 +1,39 @@
+{
+  "lastUpdate": 1639061060410,
+  "blocks": {
+    "*": {
+      "hits": {
+        "installCount": {
+          "pnp": 13
+        }
+      },
+      "values": {
+        "version": [
+          "3.1.1"
+        ],
+        "commandName": [
+          "<none>",
+          "config",
+          "add"
+        ],
+        "workspaceCount": [
+          "1"
+        ],
+        "dependencyCount": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ]
+      },
+      "enumerators": {
+        "projectCount": [
+          "a6e3689670f9e28dfa8308fcc8f355d597745b7ccf8413cd50df0a7765f847c92289b52854a09652a8d8f0feb65a99da7ddec5662c81726ba65945f2fca2468a",
+          "017ac61d3f469658a86d6341a830f2378af39d306a4777425ca8240b892fe44971d76ecca50d5cee45e09dcf462b071dd08b05c3da10c16ccfa3ea0ae061d543",
+          "48cef98667e8c01054adf0ee2ceda9a8d3d96e6e2958ab197557ca1f8e721a838210d15a4ca9483301b0694149c15529e088f10184740351019d8808c5b64ba8"
+        ]
+      }
+    }
+  }
+}
