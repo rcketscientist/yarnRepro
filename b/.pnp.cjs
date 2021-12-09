@@ -64,7 +64,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["typescript", [
         ["patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53", {
-          "packageLocation": "./.yarn/cache/typescript-patch-613ccf361e-53838d56ab.zip/node_modules/typescript/",
+          "packageLocation": "../a/.yarn/cache/cache/typescript-patch-613ccf361e-8.zip/node_modules/typescript/",
           "packageDependencies": [
             ["typescript", "patch:typescript@npm%3A4.5.2#~builtin<compat/typescript>::version=4.5.2&hash=493e53"]
           ],
